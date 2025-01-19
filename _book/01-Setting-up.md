@@ -125,7 +125,7 @@ The same thing happens in R Studio's Console! It is just much easier to read and
 
 ``` r
 x <- rnorm(15);mean(x);hist(x)
-#> [1] -0.03692747
+#> [1] 0.1038722
 ```
 
 <img src="01-Setting-up_files/figure-html/unnamed-chunk-1-1.png" width="672" />

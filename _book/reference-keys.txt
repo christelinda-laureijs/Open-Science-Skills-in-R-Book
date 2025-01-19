@@ -1,3 +1,5 @@
+workshops
+files
 welcome-and-introducing-a-tidy-workflow
 lets-get-set-up
 using-tidy-practices-in-your-open-science-projects

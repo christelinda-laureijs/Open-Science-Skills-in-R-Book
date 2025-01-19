@@ -21,6 +21,8 @@ This book is part of a workshop series led by Christelinda Laureijs, Elizabeth S
 * To give a quick overview to anyone who wants to get started with setting up R, managing their projects, and writing papers with R.
 * To gather tips, tricks and links to other resources all in one document.
 
+## Workshops
+
 This book is divided into three chapters associated with each workshop:
 
 **1. Welcome and Introducing a Tidy Workflow**
@@ -45,8 +47,6 @@ projects.
 * Exploring the history of a project
 * Collaborating in GitHub
 
-
-
 **3. Reproducible Scientific Writing with R**
 
 All the skills from the previous chapters come together in this last section.
@@ -58,4 +58,13 @@ pasting between different platforms!
 * Organizing a paper into chapters
 * Customizing your paper
 * Extract statistical values to insert directly into the paper
+
+## Files
+
+Throughout this book, we will provide links to files in the [GitHub repository for this book](https://github.com/christelinda-laureijs/Open-Science-Skills-in-R-Book). To make it easier to work with files, we have sometimes attached files directly in the book. Here is an example of a `.csv` file that you can download:
+
+```{r download-csv, echo=F}
+xfun::embed_file('workshop-materials/Sample-csv.csv')
+```
+
 
