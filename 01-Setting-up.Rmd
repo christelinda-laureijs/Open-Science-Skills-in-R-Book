@@ -2,14 +2,17 @@
 
 Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through "tidy" principles for project organisation, data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.
 
-A handout of the slides from the presentation for this workshop can be found [here](https://mountallison-my.sharepoint.com/:b:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/Workshop%201_D1_Presentation%20Handout.pdf?csf=1&web=1&e=jqCfcZ).
+A handout of the slides from the presentation for this workshop can be found in the attached PDF:
 
+```{r download-workshop-one-pdf, echo=F}
+xfun::embed_file('workshop-materials/Workshop-1-presentation.pdf')
+```
 
 ## Let's Get Set Up!
 
-This workshop relies on using software that requires a bit of preparation at the beginning to make sure we are all on the same page. You may have all or some of these installed, but the person next to you may not. Let's take some time to run through a checklist stee-by-step of what needs to be installed. **Please be patient as we work to get everyone ready to start this workshop series.**       
+This workshop relies on using software that requires a bit of preparation at the beginning to make sure we are all on the same page. You may have all or some of these installed, but the person next to you may not. Let's take some time to run through a checklist step-by-step of what needs to be installed. **Please be patient as we work to get everyone ready to start this workshop series.**       
 
-1. You will need software to work with spreadsheets. I’d recommend Excel, which MtA offers to everyone as part of Office365 [available here](https://mta.ca/current-students/tech-help-students/email-and-office-365-students). Sheets for MacOs or Google Sheets are probably fine too if you are more comfortable with these, but our team will have less capacity to help you.
+1. You will need software to work with spreadsheets. I’d recommend Excel, which MtA offers to everyone as part of Office365 [available on the Mount Allison website](https://mta.ca/current-students/tech-help-students/email-and-office-365-students). Sheets for MacOs or Google Sheets are probably fine too if you are more comfortable with these, but our team will have less capacity to help you.
 
 2. Install the [latest version of R](https://cran.csiro.au/) for your operating system.
 
@@ -36,7 +39,6 @@ install.packages(c('tidyverse', 'rmarkdown', 'ggplot2',
                    'scales', 'lazyWeave'))
 ```
 
-<br/>
 Please note, that we will do our best to help with 'debugging' if things are not working correctly on your computer. But, you might have issues you need to work on during your own time. Here are a few steps that you can take to help:
 
 * Read the documentation. If it is for a package or piece of software be sure to read and follow the instructions carefully.
@@ -58,7 +60,7 @@ We will also be making use of R markdown extensively in these workshops. Here ar
 
 ## Using *TIDY* Practices in your Open Science Projects
 
-Now that we are all set-up, we are going to focus on why organisation is important at multiple scales of your project. Although it is likley not the most exciting or complex topic, ensuring your research project files, code, and data are in a consistent, expected format facilitates an effective use of your time and productive collaborations. **Tidy, organised projects are the foundation of reproducible science.** This is why we are starting with this topic because it is the basis on which we will build the rest of our skills in this workshop series.
+Now that we are all set-up, we are going to focus on why organisation is important at multiple scales of your project. Although it is likely not the most exciting or complex topic, ensuring your research project files, code, and data are in a consistent, expected format facilitates an effective use of your time and productive collaborations. **Tidy, organised projects are the foundation of reproducible science.** This is why we are starting with this topic because it is the basis on which we will build the rest of our skills in this workshop series.
 
 The slides for the content covered in this workshop can be found [here](https://mountallison-my.sharepoint.com/:b:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/Workshop%201_D1_Presentation%20Handout.pdf?csf=1&web=1&e=jqCfcZ). There are also **many online resources that are helpful** on these topics, and here are a list of a few of them:
 
@@ -110,26 +112,32 @@ As a group, first let's discuss the concept of *tidy projects* a little.
 
 
 
-## Using the R package stylr to tidy your code
+### Using the R package stylr to tidy your code
 
-Install the R package `styler`. Refer to the code chunk above where we istalled R packages. Please add a new code chunk below, and install `styler` and load it into the R environment by adding a line of code that says `library(styler`. If you need help, please put your RED POST-IT on top of yoru laptop, and try to Google solutions until one of us arrives to help.
+Install the R package `styler`. Refer to the code chunk above where we istalled R packages. Please add a new code chunk below, and install `styler` and load it into the R environment by adding a line of code that says `library(styler)`. If you need help, please put your RED POST-IT on top of your laptop, and try to Google solutions until one of us arrives to help.
 
 Run the chunk of R code below. It works! But it is hard to read and doesn't follow our 'tidy code' ideals.
-
-The R package `styler`'s default style transformation is the `tidyverse_style()`, which is what we will use in this workshop. Use it to fix the below R code chunk. To do this, select the text you want to fix. Then, click on the button titled "Addins" within R Studio. In the dropdown menu, click on "Style selection". Run the chunk of R code again. 
-
-The same thing happens in R Studio's Console! It is just much easier to read and understand.
 
 ```{R}
 x <- rnorm(15);mean(x);hist(x)
 ```
 
+The R package `styler`'s default style transformation is the `tidyverse_style()`, which is what we will use in this workshop. Use it to fix the below R code chunk. To do this, select the text you want to fix. Then, click on the button titled "Addins" within R Studio. In the dropdown menu, click on "Style selection". Run the chunk of R code again. 
 
-### MAKING MESSY DATA TIDY
+The same thing happens in R Studio's Console! It is just much easier to read and understand.
 
-We will be working with a [very messy dataset](https://mountallison-my.sharepoint.com/:x:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/messy%20survey.xls?d=waa013cfad08f4121b193c31808339f98&csf=1&web=1&e=Ujz0Fi) hat is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We’ll be working with a subset of the data which has been ‘messed up’ a bit for the purposes of this workshop. The ‘mess’, though artificial in the context of this dataset, is of the sort which I regularly come into contact (and you will to), so it’s very much real in that sense. 
 
-You can download the dataset file from using [this link](https://mountallison-my.sharepoint.com/:x:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/messy%20survey.xls?d=waa013cfad08f4121b193c31808339f98&csf=1&web=1&e=Ujz0Fi), but please download your own copy before making any changes.
+
+
+### Making Messy Data tidy
+
+We will be working with a very messy dataset that is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We’ll be working with a subset of the data which has been ‘messed up’ a bit for the purposes of this workshop. The ‘mess’, though artificial in the context of this dataset, is of the sort which I regularly come into contact (and you will to), so it’s very much real in that sense. 
+
+Please download your own copy of the dataset before making any changes:
+
+```{r download-workshop-one-data, echo=F}
+xfun::embed_file('workshop-materials/Workshop-1-messy-survey.xlsx')
+```
 
 The data file contains:
 
@@ -140,7 +148,7 @@ The data file contains:
 * Weight: weight of the captured specimen 
 * Sex: sex of the captured specimen
 
-The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is `messy survey.xls` to parse it into its cleanest, tidiest, and most useful self. 
+The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is `messy survey.xlsx` to parse it into its cleanest, tidiest, and most useful self. 
 
 You can complete this by a mix of adjustments by hand and also in R. But, because we are making direct changes to the raw data, be sure to note down every change you make. You can do this below (with a combination of R code, if you move to that option) or in a separate text file. It is up to you!
 

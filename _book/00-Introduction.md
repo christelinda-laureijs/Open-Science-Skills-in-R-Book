@@ -6,6 +6,6 @@ We don't have too much time to review the importance of open science practices a
 
 * [A Manifesto for Reproducible Science by Munafò et al. 2017](https://www.nature.com/articles/s41562-016-0021)
 
-* We will not cover preregistration, which is simply specifying your research plan in advance of your study and submitting it to a registry. This is a important first step of a research project that adheres to open science practice. For more details, check out [this website.](https://www.cos.io/initiatives/prereg?_ga=2.263330764.1195627208.1585935801-1853960792.1572623623.)
+* We will not cover preregistration, which is simply specifying your research plan in advance of your study and submitting it to a registry. This is a important first step of a research project that adheres to open science practice. For more details, check out [the Center for Open Science page on preregistration](https://www.cos.io/initiatives/prereg?_ga=2.263330764.1195627208.1585935801-1853960792.1572623623.).
 
 * [The Center for Open Science](https://www.cos.io/open-science) also has a number of useful resources, and they also host their own repsoitory where data, etc. can be hosted and shared with others called the [Open Science Framework](https://osf.io/).
