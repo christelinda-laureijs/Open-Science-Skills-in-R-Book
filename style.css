@@ -12,3 +12,8 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+.inline-figure {
+    border: solid 2px #ffffff00;
+    margin-bottom: 1rem;
+}
