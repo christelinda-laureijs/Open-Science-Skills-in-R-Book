@@ -1,3 +1,6 @@
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
-hello-bookdown
-a-section
+welcome-and-introducing-a-tidy-workflow
+lets-get-set-up
+using-tidy-practices-in-your-open-science-projects
+discussion-and-activity-about-tidy-data
+using-the-r-package-stylr-to-tidy-your-code
+making-messy-data-tidy

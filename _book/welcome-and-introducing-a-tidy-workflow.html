@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 1 Welcome and Introducing a Tidy Workflow | Open Science Skills in R</title>
+<meta name="author" content="Christelinda Laureijs, Elizabeth Stregger, Dr. Julia Riley">
+<meta name="description" content="Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through “tidy” principles for project...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Chapter 1 Welcome and Introducing a Tidy Workflow | Open Science Skills in R">
+<meta property="og:type" content="book">
+<meta property="og:image" content="/images/cover.jpg">
+<meta property="og:description" content="Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through “tidy” principles for project...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 1 Welcome and Introducing a Tidy Workflow | Open Science Skills in R">
+<meta name="twitter:description" content="Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through “tidy” principles for project...">
+<meta name="twitter:image" content="/images/cover.jpg">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Open Science Skills in R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Introduction</a></li>
+<li><a class="" href="what-is-open-science.html">What is Open Science?</a></li>
+<li><a class="active" href="welcome-and-introducing-a-tidy-workflow.html"><span class="header-section-number">1</span> Welcome and Introducing a Tidy Workflow</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/christelinda-laureijs/Open-Science-Skills-in-R-Book">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="welcome-and-introducing-a-tidy-workflow" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> Welcome and Introducing a Tidy Workflow<a class="anchor" aria-label="anchor" href="#welcome-and-introducing-a-tidy-workflow"><i class="fas fa-link"></i></a>
+</h1>
+<p>Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through “tidy” principles for project organisation, data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.</p>
+<p>A handout of the slides from the presentation for this workshop can be found <a href="https://mountallison-my.sharepoint.com/:b:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/Workshop%201_D1_Presentation%20Handout.pdf?csf=1&amp;web=1&amp;e=jqCfcZ">here</a>.</p>
+<div id="lets-get-set-up" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Let’s Get Set Up!<a class="anchor" aria-label="anchor" href="#lets-get-set-up"><i class="fas fa-link"></i></a>
+</h2>
+<p>This workshop relies on using software that requires a bit of preparation at the beginning to make sure we are all on the same page. You may have all or some of these installed, but the person next to you may not. Let’s take some time to run through a checklist stee-by-step of what needs to be installed. <strong>Please be patient as we work to get everyone ready to start this workshop series.</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>You will need software to work with spreadsheets. I’d recommend Excel, which MtA offers to everyone as part of Office365 <a href="https://mta.ca/current-students/tech-help-students/email-and-office-365-students">available here</a>. Sheets for MacOs or Google Sheets are probably fine too if you are more comfortable with these, but our team will have less capacity to help you.</p></li>
+<li><p>Install the <a href="https://cran.csiro.au/">latest version of R</a> for your operating system.</p></li>
+<li><p>Install <a href="https://www.rstudio.com/products/rstudio/">R Studio Desktop</a> for your operating system. There are many ways to use R and you might
+have your own preference. But, RStudio is very user-friendly and will be using it for this workshop series.</p></li>
+<li><p>Depending on your operating system (Windows), it is possible that that during or after the installation of R Studio, you will be prompted to also install <a href="https://cran.r-project.org/bin/windows/Rtools/">RTools</a>. Please do so.</p></li>
+<li><p>The last software we need to install is LaTex, which facilitates creation of PDF documents in R Markdown. There are a myriad of options, including MiKTeX, MacTeX, and TeX Live. I suggest that you use TinyTeX, which you can install with the R package <strong>tinytex</strong> <a href="https://github.com/rstudio/tinytex">(Xie 2024c)</a> using this code:</p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'tinytex'</span><span class="op">)</span></span>
+<span><span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><em>You may run into issues, depending on how your operating system is set-up. The <a href="https://yihui.org/tinytex/">TinyTeX website</a> has a instruction for each operating system.</em></p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>After installation of all these programs, etc. it is very important to <strong><em>restart your computer.</em></strong> A life tip - a new program won’t be initated to work on your compute if you don’t restart it after it is installed! This is a critical part of the process.</p></li>
+<li><p>After your computer restarts, now please open R Studio. We are going to be making use of some R packages repeatedly. So, let’s just install them now, using the code below:</p></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'tidyverse'</span>, <span class="st">'rmarkdown'</span>, <span class="st">'ggplot2'</span>, </span>
+<span>                   <span class="st">'scales'</span>, <span class="st">'lazyWeave'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><br>
+Please note, that we will do our best to help with ‘debugging’ if things are not working correctly on your computer. But, you might have issues you need to work on during your own time. Here are a few steps that you can take to help:</p>
+<ul>
+<li><p>Read the documentation. If it is for a package or piece of software be sure to read and follow the instructions carefully.</p></li>
+<li><p>Google it. Google is your best friend. Google the package or piece of software, google the specific error message, and find those message board threads where people go to complain and find answers to their problems (likely GitHub and Stack Overflow). Go and find a solution for yourself!</p></li>
+</ul>
+<p>We will also be making use of R markdown extensively in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:</p>
+<ul>
+<li><p><a href="https://rmarkdown.rstudio.com/lesson-1.html">Rmarkdown Website</a> that has explaintations, tutorials, videos, etc.</p></li>
+<li><p><a href="https://rstudio.github.io/cheatsheets/rmarkdown.pdf">Rmarkdown Cheatsheet</a></p></li>
+<li><p>About <a href="https://environmentalcomputing.net/getting-started-with-r/rstudio-notebooks/">how to make use of R markdown files as a beginner</a></p></li>
+<li><p><a href="https://bookdown.org/yihui/rmarkdown/">Rmarkdown the Definitive Guide</a> is a textbook that has clear examples and information about how best to work in R markdown</p></li>
+</ul>
+<hr>
+</div>
+<div id="using-tidy-practices-in-your-open-science-projects" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Using <em>TIDY</em> Practices in your Open Science Projects<a class="anchor" aria-label="anchor" href="#using-tidy-practices-in-your-open-science-projects"><i class="fas fa-link"></i></a>
+</h2>
+<p>Now that we are all set-up, we are going to focus on why organisation is important at multiple scales of your project. Although it is likley not the most exciting or complex topic, ensuring your research project files, code, and data are in a consistent, expected format facilitates an effective use of your time and productive collaborations. <strong>Tidy, organised projects are the foundation of reproducible science.</strong> This is why we are starting with this topic because it is the basis on which we will build the rest of our skills in this workshop series.</p>
+<p>The slides for the content covered in this workshop can be found <a href="https://mountallison-my.sharepoint.com/:b:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/Workshop%201_D1_Presentation%20Handout.pdf?csf=1&amp;web=1&amp;e=jqCfcZ">here</a>. There are also <strong>many online resources that are helpful</strong> on these topics, and here are a list of a few of them:</p>
+<ul>
+<li><p>For <strong>Tidy Projects</strong>, some guidance on <a href="https://environmentalcomputing.net/getting-started-with-r/project-management/">basic project management</a>.</p></li>
+<li><p>For <strong>Tidy Code</strong>, some guidance on <a href="https://environmentalcomputing.net/coding-skills/good-practice/">good practice for coding</a></p></li>
+<li><p>The <a href="https://style.tidyverse.org/">Tidyverse Style Guide</a> for help with writing <strong>tidy code</strong> in this particular coding style</p></li>
+<li><p>The research article by Hadley Wickham describing <strong><a href="https://vita.had.co.nz/papers/tidy-data.pdf">Tidy Data</a></strong> and why it is important</p></li>
+<li><p>A blog by Julia Lowndes and Allison Horst depicting and describing the importance of <strong><a href="https://openscapes.org/blog/2020-10-12-tidy-data/">Tidy Data</a></strong></p></li>
+<li><p>A research article by Karl Broman and Kara Woo describing important <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">considerations for data organisation in spreadsheets</a> for <em>Tidy Data</em></p></li>
+</ul>
+</div>
+<div id="discussion-and-activity-about-tidy-data" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Discussion and Activity about Tidy Data<a class="anchor" aria-label="anchor" href="#discussion-and-activity-about-tidy-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>As a group, first let’s discuss the concept of <em>tidy projects</em> a little.</p>
+<p><u>The first question we will chat about is:</u></p>
+<p><em>Have a think and list all stakeholders that may conceivably have an interest in the outcomes of your research. That is, who will possibly benefit from your robust, reproducible science, in what way, and why?</em></p>
+<p><u>Feel free to write down any thoughts you have or notes here:</u></p>
+<p><u>The second question we will chat about is:</u></p>
+<p><em>Have a think &amp; jot down down one potential positive consequences and one potential negative consequences of conducting open, reproducible research. Then we will chat about them as a group.</em></p>
+<p><u>Write down your thoughts and notes from the discussion here:</u></p>
+<p><u>Now, do an activity together:</u></p>
+<p><em>Create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure.</em></p>
+<p><u>Outline your tidy project template below. Make use of R markdown’s list format (see syntax above in this document), to show any nesting of folders or files.</u></p>
+</div>
+<div id="using-the-r-package-stylr-to-tidy-your-code" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Using the R package stylr to tidy your code<a class="anchor" aria-label="anchor" href="#using-the-r-package-stylr-to-tidy-your-code"><i class="fas fa-link"></i></a>
+</h2>
+<p>Install the R package <code>styler</code>. Refer to the code chunk above where we istalled R packages. Please add a new code chunk below, and install <code>styler</code> and load it into the R environment by adding a line of code that says <code>library(styler</code>. If you need help, please put your RED POST-IT on top of yoru laptop, and try to Google solutions until one of us arrives to help.</p>
+<p>Run the chunk of R code below. It works! But it is hard to read and doesn’t follow our ‘tidy code’ ideals.</p>
+<p>The R package <code>styler</code>’s default style transformation is the <code>tidyverse_style()</code>, which is what we will use in this workshop. Use it to fix the below R code chunk. To do this, select the text you want to fix. Then, click on the button titled “Addins” within R Studio. In the dropdown menu, click on “Style selection”. Run the chunk of R code again.</p>
+<p>The same thing happens in R Studio’s Console! It is just much easier to read and understand.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">15</span><span class="op">)</span>;<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>;<span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] -0.03692747</span></span></code></pre></div>
+<div class="inline-figure"><img src="01-Setting-up_files/figure-html/unnamed-chunk-1-1.png" width="672"></div>
+<div id="making-messy-data-tidy" class="section level3" number="1.4.1">
+<h3>
+<span class="header-section-number">1.4.1</span> MAKING MESSY DATA TIDY<a class="anchor" aria-label="anchor" href="#making-messy-data-tidy"><i class="fas fa-link"></i></a>
+</h3>
+<p>We will be working with a <a href="https://mountallison-my.sharepoint.com/:x:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/messy%20survey.xls?d=waa013cfad08f4121b193c31808339f98&amp;csf=1&amp;web=1&amp;e=Ujz0Fi">very messy dataset</a> hat is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We’ll be working with a subset of the data which has been ‘messed up’ a bit for the purposes of this workshop. The ‘mess’, though artificial in the context of this dataset, is of the sort which I regularly come into contact (and you will to), so it’s very much real in that sense.</p>
+<p>You can download the dataset file from using <a href="https://mountallison-my.sharepoint.com/:x:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/messy%20survey.xls?d=waa013cfad08f4121b193c31808339f98&amp;csf=1&amp;web=1&amp;e=Ujz0Fi">this link</a>, but please download your own copy before making any changes.</p>
+<p>The data file contains:</p>
+<ul>
+<li>Three tabs: containing data from samples collected in 2013, 2014, and 2015, respectively</li>
+<li>Date Collected: date of collection of the sample</li>
+<li>Species: species identifier</li>
+<li>Plot: replicate plot identifier</li>
+<li>Weight: weight of the captured specimen</li>
+<li>Sex: sex of the captured specimen</li>
+</ul>
+<p>The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is <code>messy survey.xls</code> to parse it into its cleanest, tidiest, and most useful self.</p>
+<p>You can complete this by a mix of adjustments by hand and also in R. But, because we are making direct changes to the raw data, be sure to note down every change you make. You can do this below (with a combination of R code, if you move to that option) or in a separate text file. It is up to you!</p>
+<p>We will chat about what you have done as a group before we end the workshop.</p>
+<p><u>Use the space below to document all the changes you made to the data file. This can me a bullet-point list, description, chunks of R code, or a mixture of all three.</u></p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="what-is-open-science.html">What is Open Science?</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#welcome-and-introducing-a-tidy-workflow"><span class="header-section-number">1</span> Welcome and Introducing a Tidy Workflow</a></li>
+<li><a class="nav-link" href="#lets-get-set-up"><span class="header-section-number">1.1</span> Let’s Get Set Up!</a></li>
+<li><a class="nav-link" href="#using-tidy-practices-in-your-open-science-projects"><span class="header-section-number">1.2</span> Using TIDY Practices in your Open Science Projects</a></li>
+<li><a class="nav-link" href="#discussion-and-activity-about-tidy-data"><span class="header-section-number">1.3</span> Discussion and Activity about Tidy Data</a></li>
+<li>
+<a class="nav-link" href="#using-the-r-package-stylr-to-tidy-your-code"><span class="header-section-number">1.4</span> Using the R package stylr to tidy your code</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#making-messy-data-tidy"><span class="header-section-number">1.4.1</span> MAKING MESSY DATA TIDY</a></li></ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/christelinda-laureijs/Open-Science-Skills-in-R-Book/blob/master/01-Setting-up.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/christelinda-laureijs/Open-Science-Skills-in-R-Book/edit/master/01-Setting-up.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Open Science Skills in R</strong>" was written by Christelinda Laureijs, Elizabeth Stregger, Dr. Julia Riley. It was last built on January 18, 2025.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

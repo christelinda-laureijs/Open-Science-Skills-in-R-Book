@@ -13,13 +13,13 @@ description: |
 
 # Introduction {-}
 
-<a><img src="images/Book-cover.jpg" width="250" alt="Open Science Skills in R stylized text" style="margin: 0 1em 0 1em; float: right;" /></a>
+<a><img src="images/Book-cover.jpg" width="350" alt="Open Science Skills in R stylized text" style="margin: 0 1em 0 1em; float: right;" /></a>
 
-This book is part of a 3-part workshop series led by Christelinda Laureijs, Elizabeth Stregger, and Dr. Julia Riley. We are a group of enthusiastic R coders with a passion for open science and educational outreach! We created this book for three reasons:
+This book is part of a workshop series led by Christelinda Laureijs, Elizabeth Stregger, and Dr. Julia Riley. We are a group of enthusiastic R coders with a passion for open science and educational outreach! We created this book for three reasons:
 
-1. To provide you with a useful resource after the workshop series is over.
-2. To give a quick overview to anyone who wants to get started with setting up R, managing their projects, and writing papers with R.
-3. To gather tips, tricks and links to other resources all in one document.
+* To provide curious learners with a useful resource beyond the workshops.
+* To give a quick overview to anyone who wants to get started with setting up R, managing their projects, and writing papers with R.
+* To gather tips, tricks and links to other resources all in one document.
 
 This book is divided into three chapters associated with each workshop:
 
@@ -59,17 +59,3 @@ pasting between different platforms!
 * Customizing your paper
 * Extract statistical values to insert directly into the paper
 
-
-
-
-# Quick introduction to open science  {-}
-
-You might be wondering: **what is open science?** It is the process of making the content and process of producing evidence and claims transparent and accessible to others. This involves making the entire research process - from project conceptualization to publication - open to all and transparent. There are a number of techniques that you can work on to improve transparency and reproducibility (the ability to repeat the same project and obtain the same results) of your work. In this workshop series, we will be covering a few skills that will help you advance science using open practices.
-
-We don't have too much time to review the importance of open science practices and its philosophy in this workshop series, because we are focusing on skill building. **But, we encourage you to learn more through reading and engaging with additional resources on this topic. Here are a few we find helpful:**
-
-* [A Manifesto for Reproducible Science by Munafò et al. 2017](https://www.nature.com/articles/s41562-016-0021)
-
-* Today we will not be talking about preregistration, which is simply specifying your research plan in advance of your study and submitting it to a registry. This is a important first step of a research project that adheres to open science practice. For more details, check out [this website.](https://www.cos.io/initiatives/prereg?_ga=2.263330764.1195627208.1585935801-1853960792.1572623623.)
-
-* [The Center for Open Science](https://www.cos.io/open-science) also has a number of useful resources, and they also host their own repsoitory where data, etc. can be hosted and shared with others called the [Open Science Framework](https://osf.io/)
