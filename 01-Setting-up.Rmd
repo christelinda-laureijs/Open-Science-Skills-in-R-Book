@@ -1,6 +1,6 @@
 # Welcome and Introducing a Tidy Workflow
 
-Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through "tidy" principles for project organisation, data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.
+Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through "tidy" principles for project organisation (including how to set-up an [R Project](https://bookdown.org/daniel_dauber_io/r4np_book/starting-your-r-projects.html)), data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.
 
 A handout of the slides from the presentation for this workshop can be found in the attached PDF:
 
@@ -19,7 +19,7 @@ This workshop relies on using software that requires a bit of preparation at the
 3. Install [R Studio Desktop](https://www.rstudio.com/products/rstudio/) for your operating system. There are many ways to use R and you might
 have your own preference. But, RStudio is very user-friendly and will be using it for this workshop series.
 
-4. Depending on your operating system (Windows), it is possible that that during or after the installation of R Studio, you will be prompted to also install [RTools](https://cran.r-project.org/bin/windows/Rtools/). Please do so.
+4. Depending on your operating system (Windows), it is likely that you will also need to install [RTools](https://cran.r-project.org/bin/windows/Rtools/) to compile new R packages. Please install it now.
 
 5. The last software we need to install is LaTex, which facilitates creation of PDF documents in R Markdown. There are a myriad of options, including MiKTeX, MacTeX, and TeX Live. I suggest that you use TinyTeX, which you can install with the R package **tinytex** [(Xie 2024c)](https://github.com/rstudio/tinytex) using this code:
 
@@ -28,9 +28,9 @@ install.packages('tinytex')
 tinytex::install_tinytex()
 ```
 
-*You may run into issues, depending on how your operating system is set-up. The [TinyTeX website](https://yihui.org/tinytex/) has a instruction for each operating system.*
+*You may run into issues, depending on how your operating system is set-up. The [TinyTeX website](https://yihui.org/tinytex/) has instructions for each operating system.* You may also need to manually install one of types of software that facilitates LaTex too. If that seems to be the case, you can access these for install at [this website](https://www.latex-project.org/get/).
 
-6. After installation of all these programs, etc. it is very important to ***restart your computer.*** A life tip - a new program won't be initated to work on your compute if you don't restart it after it is installed! This is a critical part of the process.
+6. After installation of all these programs, etc. it is very important to ***restart your computer.*** A life tip - a new program won't be initiated to work on your computer if you don't restart it after it is installed! This is a critical part of the process.
 
 7. After your computer restarts, now please open R Studio. We are going to be making use of some R packages repeatedly. So, let's just install them now, using the code below:
 
