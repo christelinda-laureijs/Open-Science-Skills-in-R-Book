@@ -48,7 +48,7 @@ Please note, that we will do our best to help with 'debugging' if things are not
 
 We will also be making use of R markdown extensively in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:
 
-* [Rmarkdown Website](https://rmarkdown.rstudio.com/lesson-1.html) that has explaintations, tutorials, videos, etc.
+* [Rmarkdown Website](https://rmarkdown.rstudio.com/lesson-1.html) that has explanations, tutorials, videos, etc.
 
 * [Rmarkdown Cheatsheet](https://rstudio.github.io/cheatsheets/rmarkdown.pdf)
 
