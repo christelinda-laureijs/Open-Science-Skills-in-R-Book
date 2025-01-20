@@ -1,7 +1,7 @@
 --- 
 title: "Open Science Skills in R"
 author: "Christelinda Laureijs, Elizabeth Stregger, Dr. Julia Riley"
-date: "January 19, 2025"
+date: "January 20, 2025"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]

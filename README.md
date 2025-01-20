@@ -1,13 +1,9 @@
-Welcome! 
+# Open Science Skills in R
 
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
+Learning to use R is an important step to help you contribute to open science. We created this book as part of a workshop about Open Science Skills in R, and also to provide you with support after the workshop is over.
 
-This template provides a skeleton file structure that you can edit to create your book. 
+This book contains chapters for the following topics:
 
-The contents inside the .Rmd files provide some pointers to help you get started, but feel free to also delete the content in each file and start fresh.
-
-Additional resources:
-
-The **bookdown** book: https://bookdown.org/yihui/bookdown/
-
-The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown
+* Introducing you to R and helping you get R, RStudio, LaTeX and necessary packages installed
+* Walking you through how to set up Git and GitHub on your computer to track changes in your files and manage collaborations
+* Demonstrating tips and tricks for writing papers entirely in R (no copying and pasting between platforms!)
