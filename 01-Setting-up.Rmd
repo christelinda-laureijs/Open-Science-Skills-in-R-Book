@@ -5,7 +5,7 @@ Today we are going make sure everyone is set-up with the same software and R pac
 A handout of the slides from the presentation for this workshop can be found in the attached PDF:
 
 ```{r download-workshop-one-pdf, echo=F}
-xfun::embed_file('workshop-materials/Workshop-1-presentation.pdf')
+xfun::embed_file('workshop-materials/workshop-1-presentation.pdf')
 ```
 
 ## Let's Get Set Up!
