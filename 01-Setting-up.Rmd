@@ -63,7 +63,7 @@ We will also be making use of R markdown extensively in these workshops. Here ar
 
 Now that we are all set-up, we are going to focus on why organisation is important at multiple scales of your project. Although it is likely not the most exciting or complex topic, ensuring your research project files, code, and data are in a consistent, expected format facilitates an effective use of your time and productive collaborations. **Tidy, organised projects are the foundation of reproducible science.** This is why we are starting with this topic because it is the basis on which we will build the rest of our skills in this workshop series.
 
-The slides for the content covered in this workshop can be found [here](https://mountallison-my.sharepoint.com/:b:/r/personal/jriley_mta_ca/Documents/MTA%20TEACHING/misc/open-science-skills-in-R/1_welcome%20and%20being%20tidy/Workshop%201_D1_Presentation%20Handout.pdf?csf=1&web=1&e=jqCfcZ). There are also **many online resources that are helpful** on these topics, and here are a list of a few of them:
+There are also **many online resources that are helpful** on these topics, and here are a list of a few of them:
 
 * For **Tidy Projects**, some guidance on [basic project management](https://environmentalcomputing.net/getting-started-with-r/project-management/).
 
