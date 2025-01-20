@@ -45,6 +45,7 @@ Please note, that we will do our best to help with 'debugging' if things are not
 
 * Google it. Google is your best friend. Google the package or piece of software, google the specific error message, and find those message board threads where people go to complain and find answers to their problems (likely GitHub and Stack Overflow). Go and find a solution for yourself!
 
+
 We will also be making use of R markdown extensively in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:
 
 * [Rmarkdown Website](https://rmarkdown.rstudio.com/lesson-1.html) that has explaintations, tutorials, videos, etc.
