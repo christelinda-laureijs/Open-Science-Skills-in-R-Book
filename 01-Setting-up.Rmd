@@ -142,4 +142,4 @@ You can complete this by a mix of adjustments by hand and also in R. How you do 
 
 We will chat about what you have done as a group before we end the workshop.
 
-[Use the space below to document all the changes you made to the data file. This can be a bullet-point list, description, chunks of annotated R code, or a mixture of all three.]{.underline}
+In your R markdown file, document all the changes you made to the data file. This can be a bullet-point list, description, chunks of annotated R code, or a mixture of all three.
