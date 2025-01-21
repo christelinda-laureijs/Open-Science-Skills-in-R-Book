@@ -10,3 +10,5 @@ This book contains chapters for the following topics:
 * Walking you through how to set up Git and GitHub on your computer to track changes in your files and manage collaborations
 * Demonstrating tips and tricks for writing papers entirely in R (no copying and pasting between platforms!)
 
+
+
