@@ -101,7 +101,7 @@ Now, let's discuss as a group the concept of *tidy projects* a little.
 Next, please take a bit of time to *create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure. Make sure to include a description for your files and let's make use of R markdown's list format to show any nesting of folders or files.
 
 
-### Tidy Code: Activity about Using the R package stylr
+### Tidy Code: Activity about Using the R package `stylr`
 
 Install the R package `styler`. Refer to the code chunk above where we installed R packages. Please add a new code chunk below, and install `styler` and load it into the R environment by adding a line of code that says `library(styler)`. If you need help, please put your RED POST-IT on top of your laptop, and try to Google solutions until one of us arrives to help.
 
