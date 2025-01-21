@@ -107,7 +107,7 @@ Install the R package `styler`. Refer to the code chunk above where we installed
 
 Run the chunk of R code below. It works! But it is hard to read and doesn't follow our 'tidy code' ideals.
 
-```{R}
+```{R, eval = F}
 x <- rnorm(15);mean(x);hist(x)
 ```
 
