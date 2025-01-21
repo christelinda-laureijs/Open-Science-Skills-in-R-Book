@@ -21,7 +21,7 @@ have your own preference. But, RStudio is very user-friendly and will be using i
 
 4. Depending on your operating system (Windows), it is likely that you will also need to install [RTools](https://cran.r-project.org/bin/windows/Rtools/) to compile new R packages. Please install it now.
 
-5. The last software we need to install is LaTex, which facilitates creation of PDF documents in R Markdown. There are a myriad of options, including MiKTeX, MacTeX, and TeX Live. I suggest that you use TinyTeX, which you can install with the R package **tinytex** [(Xie 2024c)](https://github.com/rstudio/tinytex) using this code:
+5. The last software we need to install is LaTex, which facilitates the creation of PDF documents in R Markdown. There are a myriad of options, including MiKTeX, MacTeX, and TeX Live. I suggest that you use TinyTeX, which you can install with the R package **tinytex** [(Xie 2024c)](https://github.com/rstudio/tinytex) using this code:
 
 ```{r tinytex install, eval = F}
 install.packages('tinytex')
@@ -46,7 +46,7 @@ Please note, that we will do our best to help with 'debugging' if things are not
 * Google it. Google is your best friend. Google the package or piece of software, google the specific error message, and find those message board threads where people go to complain and find answers to their problems (likely GitHub and Stack Overflow). Go and find a solution for yourself!
 
 
-We will also be making use of R markdown extensively in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:
+We will also be making extensive use of R markdown in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:
 
 * [Rmarkdown Website](https://rmarkdown.rstudio.com/lesson-1.html) that has explanations, tutorials, videos, etc.
 
@@ -61,9 +61,9 @@ We will also be making use of R markdown extensively in these workshops. Here ar
 
 ## Using *TIDY* Practices in your Open Science Projects
 
-Now that we are all set-up, we are going to focus on why organisation is important at multiple scales of your project. Although it is likely not the most exciting or complex topic, ensuring your research project files, code, and data are in a consistent, expected format facilitates an effective use of your time and productive collaborations. **Tidy, organised projects are the foundation of reproducible science.** This is why we are starting with this topic because it is the basis on which we will build the rest of our skills in this workshop series.
+Now that we are all set-up, we are going to focus on why organisation is important at multiple scales of your project. Although it is likely not the most exciting or complex topic, ensuring your research project files, code, and data are in a consistent, expected format facilitates effective use of your time and productive collaborations. **Tidy, organised projects are the foundation of reproducible science.** This is why we are starting with this topic because it is the basis on which we will build the rest of our skills in this workshop series.
 
-There are also **many online resources that are helpful** on these topics, and here are a list of a few of them:
+There are also **many online resources that are helpful** on these topics, and here is a list of a few of them:
 
 * For **Tidy Projects**, some guidance on [basic project management](https://environmentalcomputing.net/getting-started-with-r/project-management/).
 
@@ -78,24 +78,30 @@ There are also **many online resources that are helpful** on these topics, and h
 * A research article by Karl Broman and Kara Woo describing important [considerations for data organisation in spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) for *Tidy Data*
 
 
-## Discussion and Activity about Tidy Data
+## Plan for the Workshop
 
-As a group, first let's discuss the concept of *tidy projects* a little. 
+Today's workshop is going to be a mix of lecture and activities. You have already downloaded the slides for the lecture, and after I introduce the concept of "tidy projects" we will start working on some activities. These will be outlined on both the slides and within an Rmarkdown document, which we will set-up together, and you can use to make notes if you wish.
+
+
+## Discussion and Activity about Tidy Projects
+
+First, let's make our own R project to work on the activities that will be happening during this workshop series. So, together, let's open R Studio. Then, we will create new R project and save it somewhere safe on our computers. Last, let's download the Rmarkdown file below and save it within the R project folder we just created:
+
+```{r download-workshop-one-pdf, echo=F}
+xfun::embed_file('workshop-materials/workshop-1-Rmarkdown worksheet')
+```
+Awesome! Let's open up that R markdown document together within our R project. You can see there are notes from today's workshop in this document. I will walk you through how to knit the document, and view it in a nicely formatted version. You will see there are places for you to fill in your own notes on the activities are going to do today. Feel free to fill it in as we go!
+
+Now, let's discuss as a group the concept of *tidy projects* a little. 
 
 1. *Have a think and list all stakeholders that may conceivably have an interest in the outcomes of your research. That is, who will possibly benefit from your robust, reproducible science, in what way, and why?*
 
-
 2. *Have a think & jot down down one potential positive consequences and one potential negative consequences of conducting open, reproducible research. Then we will chat about them as a group.*
 
-
-#### Activity {-}
-
-*Create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure.*
-
-[Outline your tidy project template below. Make use of R markdown's list format (see syntax above in this document), to show any nesting of folders or files.]{.underline}
+Next, please take a bit of time to *create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure. Make sure to include a description for your files and let's make use of R markdown's list format to show any nesting of folders or files.
 
 
-### Using the R package stylr to tidy your code
+### Activity about Using the R package stylr to tidy your code
 
 Install the R package `styler`. Refer to the code chunk above where we installed R packages. Please add a new code chunk below, and install `styler` and load it into the R environment by adding a line of code that says `library(styler)`. If you need help, please put your RED POST-IT on top of your laptop, and try to Google solutions until one of us arrives to help.
 
@@ -110,14 +116,14 @@ The R package `styler`'s default style transformation is the `tidyverse_style()`
 The same thing happens in R Studio's Console! It is just much easier to read and understand.
 
 
-### Making Messy Data tidy
+### Making Messy Data Tidy
 
-We will be working with a very messy dataset that is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We’ll be working with a subset of the data which has been ‘messed up’ a bit for the purposes of this workshop. The ‘mess’, though artificial in the context of this dataset, is of the sort which I regularly come into contact (and you will to), so it’s very much real in that sense. 
+We will be working with a very messy dataset that is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We’ll be working with a subset of the data which has been ‘messed up’ a bit for the purposes of this workshop. The ‘mess’, though artificial in the context of this dataset, is of the sort that I regularly come into contact (and you will to), so it’s very much real in that sense. 
 
 Please download your own copy of the dataset before making any changes:
 
 ```{r download-workshop-one-data, echo=F}
-xfun::embed_file('workshop-materials/Workshop-1-messy-survey.xlsx')
+xfun::embed_file('workshop-materials/workshop-1-messy-survey.xlsx')
 ```
 
 <br>
@@ -130,10 +136,10 @@ The data file contains:
 * Weight: weight of the captured specimen 
 * Sex: sex of the captured specimen
 
-The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is `messy survey.xlsx` to parse it into its cleanest, tidiest, and most useful self. 
+The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is `workshop-1-messy-survey.xlsx` to parse it into its cleanest, tidiest, and most useful self. 
 
-You can complete this by a mix of adjustments by hand and also in R. But, because we are making direct changes to the raw data, be sure to note down every change you make. You can do this below (with a combination of R code, if you move to that option) or in a separate text file. It is up to you!
+You can complete this by a mix of adjustments by hand and also in R. How you do it is up to you! But, because as we are making direct changes to the raw data, be sure to note down every change you make (especially if you are doing this by hand rather than using code in R). You can do this below (with a combination of R code within an R chunk, if you choose that option) or in a separate text file. It is up to you!
 
 We will chat about what you have done as a group before we end the workshop.
 
-[Use the space below to document all the changes you made to the data file. This can me a bullet-point list, description, chunks of R code, or a mixture of all three.]{.underline}
+[Use the space below to document all the changes you made to the data file. This can be a bullet-point list, description, chunks of annotated R code, or a mixture of all three.]{.underline}
