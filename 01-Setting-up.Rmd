@@ -82,7 +82,8 @@ There are also **many online resources that are helpful** on these topics, and h
 
 Today's workshop is going to be a mix of lecture and activities. You have already downloaded the slides for the lecture, and after I introduce the concept of "tidy projects" we will start working on some activities. These are outlined below (on this website), on both the slides, and within an editable Rmarkdown document. We will set-up that R markdown document together and I encourage you to use that file to take work on the activities within and take notes on this workshop.
 
-## Discussion and Activity about Tidy Projects
+
+## Tidy Projects: Activities and Discussion
 
 First, let's make our own R project to work on the activities that will be happening during this workshop series. So, together, let's open R Studio. Then, we will create new R project and save it somewhere safe on our computers. Last, let's download the Rmarkdown file below and save it within the R project folder we just created:
 
@@ -100,7 +101,7 @@ Now, let's discuss as a group the concept of *tidy projects* a little.
 Next, please take a bit of time to *create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure. Make sure to include a description for your files and let's make use of R markdown's list format to show any nesting of folders or files.
 
 
-### Activity about Using the R package stylr to tidy your code
+### Tidy Code: Activity about Using the R package stylr
 
 Install the R package `styler`. Refer to the code chunk above where we installed R packages. Please add a new code chunk below, and install `styler` and load it into the R environment by adding a line of code that says `library(styler)`. If you need help, please put your RED POST-IT on top of your laptop, and try to Google solutions until one of us arrives to help.
 
@@ -115,7 +116,7 @@ The R package `styler`'s default style transformation is the `tidyverse_style()`
 The same thing happens in R Studio's Console! It is just much easier to read and understand.
 
 
-### Making Messy Data Tidy
+### Tidy Data: Activity about Making Messy Data Tidy
 
 We will be working with a very messy dataset that is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We’ll be working with a subset of the data which has been ‘messed up’ a bit for the purposes of this workshop. The ‘mess’, though artificial in the context of this dataset, is of the sort that I regularly come into contact (and you will to), so it’s very much real in that sense. 
 
