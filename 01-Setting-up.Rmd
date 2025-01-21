@@ -80,8 +80,7 @@ There are also **many online resources that are helpful** on these topics, and h
 
 ## Plan for the Workshop
 
-Today's workshop is going to be a mix of lecture and activities. You have already downloaded the slides for the lecture, and after I introduce the concept of "tidy projects" we will start working on some activities. These will be outlined on both the slides and within an Rmarkdown document, which we will set-up together, and you can use to make notes if you wish.
-
+Today's workshop is going to be a mix of lecture and activities. You have already downloaded the slides for the lecture, and after I introduce the concept of "tidy projects" we will start working on some activities. These are outlined below (on this website), on both the slides, and within an editable Rmarkdown document. We will set-up that R markdown document together and I encourage you to use that file to take work on the activities within and take notes on this workshop.
 
 ## Discussion and Activity about Tidy Projects
 
