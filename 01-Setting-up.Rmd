@@ -5,7 +5,7 @@ Today we are going make sure everyone is set-up with the same software and R pac
 A handout of the slides from the presentation for this workshop can be found in the attached PDF:
 
 ```{r download-workshop-one-pdf, echo=F}
-xfun::embed_file('workshop-materials/workshop-1-presentation.pdf')
+xfun::embed_file('workshop-materials/workshop-1-presentation-handout.pdf')
 ```
 
 ## Let's Get Set Up!
@@ -87,8 +87,13 @@ Today's workshop is going to be a mix of lecture and activities. You have alread
 
 First, let's make our own R project to work on the activities that will be happening during this workshop series. So, together, let's open R Studio. Then, we will create new R project and save it somewhere safe on our computers. Last, let's download the Rmarkdown file below and save it within the R project folder we just created:
 
+<<<<<<< HEAD
 ```{r download-workshop-one-pdf-version-2, echo=F}
 #xfun::embed_file('workshop-materials/workshop-1-Rmarkdown worksheet')
+=======
+```{r download-workshop-one-pdf, echo=F}
+xfun::embed_file('workshop-materials/workshop-1-Rmarkdown-worksheet.Rmd')
+>>>>>>> 4d1797c779cedfbee4601d53c5ea7620b5e94470
 ```
 Awesome! Let's open up that R markdown document together within our R project. You can see there are notes from today's workshop in this document. I will walk you through how to knit the document, and view it in a nicely formatted version. You will see there are places for you to fill in your own notes on the activities are going to do today. Feel free to fill it in as we go!
 

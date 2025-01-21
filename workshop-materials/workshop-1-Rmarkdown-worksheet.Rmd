@@ -1,0 +1,162 @@
+---
+title: "Worksheet for Workshop # 1: Welcome & Being Tidy"
+author: "Julia Riley"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# WORKSHOP # 1 PLAN & WORKSHEET EXPLAINATION
+
+During this workshop, I will be explaining topics alongside a Powerpoint presentation. Then, I will take breaks for discussions and activities centred on the topic that was just covered. This Rmarkdown document is a place to work on those activities and take notes on the discussions, while working on a new skill (using an Rmarkdown document within and R project).
+
+
+<br/>
+~~~
+<br/>
+
+
+# USEFUL RESOURCES ABOUT RMARKDOWN
+
+* [Rmarkdown Website](https://rmarkdown.rstudio.com/lesson-1.html) that has explaintations, tutorials, videos, etc.
+
+* [Rmarkdown Cheatsheet](https://rstudio.github.io/cheatsheets/rmarkdown.pdf)
+
+* About [how to make use of R markdown files as a beginner](https://environmentalcomputing.net/getting-started-with-r/rstudio-notebooks/)
+
+* [Rmarkdown the Definitive Guide](https://bookdown.org/yihui/rmarkdown/) is a textbook that has clear examples and information about how best to work in R markdown
+
+
+<br/>
+~~~
+<br/>
+
+
+# USEFUL RESOURCES ABOUT *TIDY* PRACTICES
+
+* For **Tidy Projects**, some guidance on [basic project management](https://environmentalcomputing.net/getting-started-with-r/project-management/).
+
+* For **Tidy Code**, some guidance on [good practice for coding](https://environmentalcomputing.net/coding-skills/good-practice/)
+
+* The [Tidyverse Style Guide](https://style.tidyverse.org/) for help with writing **tidy code** in this particular coding style
+
+* The research article by Hadley Wickham describing **[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf)** and why it is important
+
+* A blog by Julia Lowndes and Allison Horst depicting and describing the importance of **[Tidy Data](https://openscapes.org/blog/2020-10-12-tidy-data/)**
+
+* A research article by Karl Broman and Kara Woo describing important [considerations for data organisation in spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) for *Tidy Data*
+
+
+<br/>
+~~~
+<br/>
+
+
+# TIDY PROJECTS: ACTIVITIES & DISCUSSION 
+
+## Creating a New R Project
+
+You already completed this step, because you have this Rmarkdown file open in the R project you just created. Exciting!
+
+
+## Discussion about Tidy Project
+
+As a group, first let's discuss the concept of *tidy projects* a little. 
+
+[The first question we will chat about is:]{.underline}
+
+*Have a think and list all stakeholders that may conceivably have an interest in the outcomes of your research. That is, who will possibly benefit from your robust, reproducible science, in what way, and why?*
+
+[Feel free to write down any thoughts you have or notes below:]{.underline}
+
+
+
+
+
+[The second question we will chat about is:]{.underline}
+
+*Have a think & jot down down one potential positive consequences and one potential negative consequences of conducting open, reproducible research. Then we will chat about them as a group.*
+
+[Write down your thoughts and notes from the discussion here:]{.underline}
+
+
+
+
+
+
+## Creating a Tidy Project File Structure
+
+[Now, let's do an activity together:]{.underline}
+
+*Create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure.*
+
+[Outline your tidy project template below. Make use of R markdown's list format (see syntax above in this document), to show any nesting of folders or files.]{.underline}
+
+
+
+
+
+
+
+<br/>
+~~~
+<br/>
+
+# TIDY CODE: ACTIVITY
+
+## Using the R Package `styler` to Help Tidy your Code
+
+Install the R package `styler`. You can copy and paste `install.packages(styler)` into the Console and run it to accomplish this. Next, please add a new code chunk below, and load `styler` into the R environment by adding a line of code that says `library(styler)`. If you need help, please put your RED POST-IT on top of your laptop, and try to Google solutions until one of us arrives to help.
+
+Run the chunk of R code below. It works! But it is hard to read and doesn't follow our 'tidy code' ideals.
+
+The R package `styler`'s default style transformation is the `tidyverse_style()`, which is what we will use in this workshop. Use it to fix the below R code chunk. To do this, select the text you want to fix. Then, click on the button titled "Addins" within R Studio. In the dropdown menu, click on "Style selection". Run the chunk of R code again. 
+
+The same thing happens in R Studio's Console! It is just much easier to read and understand.
+
+```{R}
+x <- rnorm(15);mean(x);hist(x)
+```
+
+
+<br/>
+~~~
+<br/>
+
+
+# TIDY DATA: ACTIVITY
+
+## Making Messy Data Tidy
+
+We will be working with a very messy dataset that is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We’ll be working with a subset of the data which has been ‘messed up’ a bit for the purposes of this workshop. The ‘mess’, though artificial in the context of this dataset, is of the sort which I regularly come into contact (and you will to), so it’s very much real in that sense. 
+
+You can download the dataset from this [workshop's website](https://open-science-skills-in-r.netlify.app/welcome-and-introducing-a-tidy-workflow) and please place it in your R project for this workshop series.
+
+The data file contains:
+
+* Three tabs: containing data from samples collected in 2013, 2014, and 2015, respectively 
+* Date Collected: date of collection of the sample
+* Species: species identifier
+* Plot: replicate plot identifier
+* Weight: weight of the captured specimen 
+* Sex: sex of the captured specimen
+
+The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is `workshop-1-messy-survey.xlsx` to parse it into its cleanest, tidiest, and most useful self. 
+
+You can complete this by a mix of adjustments by hand and also in R. But, because we are making direct changes to the raw data, be sure to note down every change you make. You can do this below (with a combination of R code, if you move to that option) or in a separate text file. It is up to you!
+
+We will chat about what you have done as a group before we end the workshop.
+
+[Use the space below to document all the changes you made to the data file. This could be a bullet-point list, description, chunks of R code, or a mixture of all three.]{.underline}
+
+
+
+
+
+
+
+
+
+
+<br/>
+~~~
+<br/>
