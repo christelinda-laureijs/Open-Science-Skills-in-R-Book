@@ -3,6 +3,7 @@ files
 welcome-and-introducing-a-tidy-workflow
 lets-get-set-up
 using-tidy-practices-in-your-open-science-projects
-discussion-and-activity-about-tidy-data
-using-the-r-package-stylr-to-tidy-your-code
-making-messy-data-tidy
+plan-for-the-workshop
+tidy-projects-activities-and-discussion
+tidy-code-activity-about-using-the-r-package-stylr
+tidy-data-activity-about-making-messy-data-tidy
