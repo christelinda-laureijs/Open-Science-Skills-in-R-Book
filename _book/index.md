@@ -1,7 +1,7 @@
 --- 
 title: "Open Science Skills in R"
 author: "Christelinda Laureijs, Elizabeth Stregger, Dr. Julia Riley"
-date: "January 21, 2025"
+date: "January 24, 2025"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -65,7 +65,7 @@ Throughout this book, we will provide links to files in the [GitHub repository f
 
 
 ```{=html}
-<a href="data:text/csv;base64,QSxCLEMNCjEsMiwzDQo=" download="Sample-csv.csv">Download Sample-csv.csv</a>
+<a href="data:text/csv;base64,QSxCLEMKMSwyLDMK" download="Sample-csv.csv">Download Sample-csv.csv</a>
 ```
 
 
