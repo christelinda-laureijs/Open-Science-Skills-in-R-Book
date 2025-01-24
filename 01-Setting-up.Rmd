@@ -1,7 +1,5 @@
 # Welcome and Introducing a Tidy Workflow
 
-TEST
-
 Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through "tidy" principles for project organisation (including how to set-up an [R Project](https://bookdown.org/daniel_dauber_io/r4np_book/starting-your-r-projects.html)), data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.
 
 A handout of the slides from the presentation for this workshop can be found in the attached PDF:
