@@ -1,6 +1,6 @@
 # Welcome and Introducing a Tidy Workflow
 
-Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through "tidy" principles for project organisation (including how to set-up an [R Project](https://bookdown.org/daniel_dauber_io/r4np_book/starting-your-r-projects.html)), data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.
+Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through "tidy" principles for project organisation (including how to set-up an [R Project](https://r4np.com/06_starting_r_projects.html)), data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.
 
 A handout of the slides from the presentation for this workshop can be found in the attached PDF:
 
@@ -21,14 +21,14 @@ have your own preference. But, RStudio is very user-friendly and will be using i
 
 4. Depending on your operating system (Windows), it is likely that you will also need to install [RTools](https://cran.r-project.org/bin/windows/Rtools/) to compile new R packages. Please install it now.
 
-5. The last software we need to install is LaTex, which facilitates the creation of PDF documents in R Markdown. There are a myriad of options, including MiKTeX, MacTeX, and TeX Live. I suggest that you use TinyTeX, which you can install with the R package **tinytex** [(Xie 2024c)](https://github.com/rstudio/tinytex) using this code:
+5. The last software we need to install is LaTex, which facilitates the creation of PDF documents in R Markdown. There are a myriad of options, including MiKTeX, MacTeX, and TeX Live. I suggest that you use TinyTeX, which you can install with the R package **tinytex** [(Xie 2024c)](https://github.com/rstudio/tinytex) by running this code in the Console:
 
 ```{r tinytex install, eval = F}
 install.packages('tinytex')
 tinytex::install_tinytex()
 ```
 
-*You may run into issues, depending on how your operating system is set-up. The [TinyTeX website](https://yihui.org/tinytex/) has instructions for each operating system.* You may also need to manually install one of types of software that facilitates LaTex too. If that seems to be the case, you can access these for install at [this website](https://www.latex-project.org/get/).
+*You may run into issues, depending on how your operating system is set-up. The [TinyTeX website](https://yihui.org/tinytex/) has instructions for each operating system.* It may be possible that you will need to manually install one of types of software that facilitates LaTex too. If that seems to be the case, you can access these for install at [this website](https://www.latex-project.org/get/).
 
 6. After installation of all these programs, etc. it is very important to ***restart your computer.*** A life tip - a new program won't be initiated to work on your computer if you don't restart it after it is installed! This is a critical part of the process.
 
@@ -39,14 +39,15 @@ install.packages(c('tidyverse', 'rmarkdown', 'ggplot2',
                    'scales', 'lazyWeave'))
 ```
 
+<br>
 Please note, that we will do our best to help with 'debugging' if things are not working correctly on your computer. But, you might have issues you need to work on during your own time. Here are a few steps that you can take to help:
 
 * Read the documentation. If it is for a package or piece of software be sure to read and follow the instructions carefully.
 
 * Google it. Google is your best friend. Google the package or piece of software, google the specific error message, and find those message board threads where people go to complain and find answers to their problems (likely GitHub and Stack Overflow). Go and find a solution for yourself!
 
-
-We will also be making extensive use of R markdown in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:
+<br>
+We will also be making extensive use of **R markdown** in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:
 
 * [Rmarkdown Website](https://rmarkdown.rstudio.com/lesson-1.html) that has explanations, tutorials, videos, etc.
 
@@ -75,17 +76,17 @@ There are also **many online resources that are helpful** on these topics, and h
 
 * A blog by Julia Lowndes and Allison Horst depicting and describing the importance of **[Tidy Data](https://openscapes.org/blog/2020-10-12-tidy-data/)**
 
-* A research article by Karl Broman and Kara Woo describing important [considerations for data organisation in spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) for *Tidy Data*
+* A research article by Karl Broman and Kara Woo describing important [considerations for data organisation in spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) for **Tidy Data**
 
 
-## Plan for the Workshop
+### Plan for the Workshop
 
-Today's workshop is going to be a mix of lecture and activities. You have already downloaded the slides for the lecture, and after I introduce the concept of "tidy projects" we will start working on some activities. These are outlined below (on this website), on both the slides, and within an editable Rmarkdown document. We will set-up that R markdown document together and I encourage you to use that file to take work on the activities within and take notes on this workshop.
+Today's workshop is going to be a mix of lecture and activities. You have already downloaded the slides for the lecture, and after I introduce the concept of "tidy projects" we will start working on some activities. These are outlined below (on this website), and also on the presentation slides and within an editable Rmarkdown document. We will set-up that R markdown document together and I encourage you to use that file to take notes and work on the activities.
 
 
-## Tidy Projects: Activities and Discussion
+### Tidy Projects: Activities and Discussion
 
-First, let's make our own R project to work on the activities that will be happening during this workshop series. So, together, let's open R Studio. Then, we will create new R project and save it somewhere safe on our computers. Last, let's download the Rmarkdown file below and save it within the R project folder we just created:
+First, **let's make our own R project** to work on the activities that will be happening during this workshop series. So, together, let's open R Studio. Then, we will create new R project and save it somewhere safe on our computers. Last, let's download the Rmarkdown file below and save it within the R project folder we just created:
 
 
 ```{r download-workshop-one-rmd, echo=F}
@@ -93,15 +94,17 @@ First, let's make our own R project to work on the activities that will be happe
 xfun::embed_file('workshop-materials/workshop-1-Rmarkdown-worksheet.Rmd')
 
 ```
+
+<br>
 Awesome! Let's open up that R markdown document together within our R project. You can see there are notes from today's workshop in this document. I will walk you through how to knit the document, and view it in a nicely formatted version. You will see there are places for you to fill in your own notes on the activities are going to do today. Feel free to fill it in as we go!
 
-Now, let's discuss as a group the concept of *tidy projects* a little. 
+Now, let's **discuss as a group the concept of tidy projects** a little. 
 
 1. *Have a think and list all stakeholders that may conceivably have an interest in the outcomes of your research. That is, who will possibly benefit from your robust, reproducible science, in what way, and why?*
 
 2. *Have a think & jot down down one potential positive consequences and one potential negative consequences of conducting open, reproducible research. Then we will chat about them as a group.*
 
-Next, please take a bit of time to *create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure. Make sure to include a description for your files and let's make use of R markdown's list format to show any nesting of folders or files.
+Next, please take a bit of time to **create a tidy project template for a real or hypothetical research project** you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure. Make sure to include a description for your files and let's make use of R markdown's list format to show any nesting of folders or files.
 
 
 ### Tidy Code: Activity about Using the R package `stylr`
@@ -136,13 +139,13 @@ The data file contains:
 * Date Collected: date of collection of the sample
 * Species: species identifier
 * Plot: replicate plot identifier
-* Weight: weight of the captured specimen 
+* Weight: weight of the captured specimen in grams
 * Sex: sex of the captured specimen
 
 The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is `workshop-1-messy-survey.xlsx` to parse it into its cleanest, tidiest, and most useful self. 
 
 You can complete this by a mix of adjustments by hand and also in R. How you do it is up to you! But, because as we are making direct changes to the raw data, be sure to note down every change you make (especially if you are doing this by hand rather than using code in R). You can do this below (with a combination of R code within an R chunk, if you choose that option) or in a separate text file. It is up to you!
 
-We will chat about what you have done as a group before we end the workshop.
+We will chat about what you have done as a group before we end the workshop. Thanks for your attention today!
 
 In your R markdown file, document all the changes you made to the data file. This can be a bullet-point list, description, chunks of annotated R code, or a mixture of all three.

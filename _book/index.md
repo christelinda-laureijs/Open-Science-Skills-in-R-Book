@@ -1,7 +1,7 @@
 --- 
 title: "Open Science Skills in R"
 author: "Christelinda Laureijs, Elizabeth Stregger, Dr. Julia Riley"
-date: "January 24, 2025"
+date: "January 26, 2025"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -30,10 +30,11 @@ This book is divided into three chapters associated with each workshop:
 These skills will help in with organization for your research project,
 collaborations, and ensuring transparency and broad impact.
 
-* How to set up R, RStudio, LaTeX and required packages
+* How to set up R, RStudio, LaTeX, and required packages
 * Tidy projects and data management strategies
 * Tidy coding practices
 * Organizing your research project
+
 
 **2. Git with it**
 
@@ -46,6 +47,7 @@ projects.
 * Tracking changes to your project
 * Exploring the history of a project
 * Collaborating in GitHub
+
 
 **3. Reproducible Scientific Writing with R**
 
@@ -65,7 +67,7 @@ Throughout this book, we will provide links to files in the [GitHub repository f
 
 
 ```{=html}
-<a href="data:text/csv;base64,QSxCLEMKMSwyLDMK" download="Sample-csv.csv">Download Sample-csv.csv</a>
+<a href="data:text/csv;base64,QSxCLEMKMSwyLDMK" download="sample-csv.csv">Download sample-csv.csv</a>
 ```
 
 

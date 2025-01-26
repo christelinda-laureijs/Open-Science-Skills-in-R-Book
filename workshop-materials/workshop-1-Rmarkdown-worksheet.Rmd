@@ -58,7 +58,7 @@ During this workshop, I will be explaining topics alongside a Powerpoint present
 You already completed this step, because you have this Rmarkdown file open in the R project you just created. Exciting!
 
 
-## Discussion about Tidy Project
+## Discussion about Tidy Projects
 
 As a group, first let's discuss the concept of *tidy projects* a little. 
 
@@ -87,7 +87,7 @@ As a group, first let's discuss the concept of *tidy projects* a little.
 
 [Now, let's do an activity together:]{.underline}
 
-*Create a tidy project templates for a research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure.*
+*Create a tidy project templates for a real or theoretical research project you are working on. Take some time to think about the common ‘ingredients’ of your project because that will help you create a flexible, generic project structure.*
 
 [Outline your tidy project template below. Make use of R markdown's list format (see syntax above in this document), to show any nesting of folders or files.]{.underline}
 
