@@ -108,7 +108,7 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
-\bibliographystyle{apalike}
+\bibliographystyle{plainnat}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -120,25 +120,8 @@
 
 \title{Open Science Skills in R}
 \author{Christelinda Laureijs, Elizabeth Stregger, Dr.~Julia Riley}
-\date{January 18, 2025}
+\date{February 04, 2025}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -146,13 +129,90 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter{About}\label{about}
+\chapter*{Introduction}\label{introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 
-Hello everyone! We would like to start off with a quick introduction to the concept of open science and also what you can expect during this workshop series.
+This book is part of a workshop series led by Christelinda Laureijs, Elizabeth Stregger, and Dr.~Julia Riley. We are a group of enthusiastic R coders with a passion for open science and educational outreach! We created this book for three reasons:
 
-\section{QUICK INTRODUCTION TO OPEN SCIENCE}\label{quick-introduction-to-open-science}
+\begin{itemize}
+\tightlist
+\item
+  To provide curious learners with a useful resource beyond the workshops.
+\item
+  To give a quick overview to anyone who wants to get started with setting up R, managing their projects, and writing papers with R.
+\item
+  To gather tips, tricks and links to other resources all in one document.
+\end{itemize}
 
-You might be wondering: \textbf{what is open science?} It is the process of making the content and process of producing evidence and claims transparent and accessible to others. This involves making the entire research process - from project conceptualization to publication - open to all and transparent. There are a number of techniques that you can work on to improve transparency and reproducibility (the ability to repeat the same project and obtain the same results) of your work. In this workshop series, we will be covering a few skills that will help you advance science using open practices.
+\section{Workshops}\label{workshops}
+
+This book is divided into three chapters associated with each workshop:
+
+\textbf{1. Welcome and Introducing a Tidy Workflow}
+
+These skills will help in with organization for your research project,
+collaborations, and ensuring transparency and broad impact.
+
+\begin{itemize}
+\tightlist
+\item
+  How to set up R, RStudio, LaTeX, and required packages
+\item
+  Tidy projects and data management strategies
+\item
+  Tidy coding practices
+\item
+  Organizing your research project
+\end{itemize}
+
+\textbf{2. Git with it}
+
+After this section, you'll have an understanding of how you can track changes
+with Git, share your work with GitHub, reuse open code, and contribute to open
+projects.
+
+\begin{itemize}
+\tightlist
+\item
+  Setting up Git on your computer
+\item
+  Creating a repository
+\item
+  Tracking changes to your project
+\item
+  Exploring the history of a project
+\item
+  Collaborating in GitHub
+\end{itemize}
+
+\textbf{3. Reproducible Scientific Writing with R}
+
+All the skills from the previous chapters come together in this last section.
+You will learn how to write a paper completely within R - no more copying and
+pasting between different platforms!
+
+\begin{itemize}
+\tightlist
+\item
+  Creating publication-ready figures and tables
+\item
+  Managing citations
+\item
+  Organizing a paper into chapters
+\item
+  Customizing your paper
+\item
+  Extract statistical values to insert directly into the paper
+\end{itemize}
+
+\section{Files}\label{files}
+
+Throughout this book, we will provide links to files in the \href{https://github.com/christelinda-laureijs/Open-Science-Skills-in-R-Book}{GitHub repository for this book}. To make it easier to work with files, we have sometimes attached files directly in the book. Here is an example of a \texttt{.csv} file that you can download:
+
+\chapter*{What is Open Science?}\label{what-is-open-science}
+\addcontentsline{toc}{chapter}{What is Open Science?}
+
+You might be wondering: \textbf{``What is open science?''} It is the process of making the content and process of producing evidence and claims transparent and accessible to others. This involves making the entire research process - from project conceptualization to publication - open to all and transparent. There are a number of techniques that you can work on to improve transparency and reproducibility (the ability to repeat the same project and obtain the same results) of your work. In this workshop series, we will be covering a few skills that will help you advance science using open practices.
 
 We don't have too much time to review the importance of open science practices and its philosophy in this workshop series, because we are focusing on skill building. \textbf{But, we encourage you to learn more through reading and engaging with additional resources on this topic. Here are a few we find helpful:}
 
@@ -160,255 +220,244 @@ We don't have too much time to review the importance of open science practices a
 \item
   \href{https://www.nature.com/articles/s41562-016-0021}{A Manifesto for Reproducible Science by Munafò et al.~2017}
 \item
-  Today we will not be talking about preregistration, which is simply specifying your research plan in advance of your study and submitting it to a registry. This is a important first step of a research project that adheres to open science practice. For more details, check out \href{https://www.cos.io/initiatives/prereg?_ga=2.263330764.1195627208.1585935801-1853960792.1572623623.}{this website.}
+  We will not cover preregistration, which is simply specifying your research plan in advance of your study and submitting it to a registry. This is a important first step of a research project that adheres to open science practice. For more details, check out \href{https://www.cos.io/initiatives/prereg?_ga=2.263330764.1195627208.1585935801-1853960792.1572623623.}{the Center for Open Science page on preregistration}.
 \item
-  \href{https://www.cos.io/open-science}{The Center for Open Science} also has a number of useful resources, and they also host their own repsoitory where data, etc. can be hosted and shared with others called the \href{https://osf.io/}{Open Science Framework}
+  \href{https://www.cos.io/open-science}{The Center for Open Science} also has a number of useful resources, and they also host their own repsoitory where data and code (even those tracked with version control) can be hosted and shared with others called the \href{https://osf.io/}{Open Science Framework}.
 \end{itemize}
 
-\section{Usage}\label{usage}
+\chapter{Welcome and Introducing a Tidy Workflow}\label{welcome-and-introducing-a-tidy-workflow}
 
-Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \texttt{\#\ A\ good\ chapter}, and can contain one (and only one) first-level heading.
+Today we are going make sure everyone is set-up with the same software and R packages that will be used across this workshop series. Then, we will work through ``tidy'' principles for project organisation (including how to set-up an \href{https://r4np.com/06_starting_r_projects.html}{R Project}), data management, and coding in R. These are skills that are critical to support open science and facilitate effective and productive collaborations.
 
-Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ short\ section} or \texttt{\#\#\#\ An\ even\ shorter\ section}.
+A handout of the slides from the presentation for this workshop can be found in the attached PDF:
 
-The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
+\section{Let's Get Set Up!}\label{lets-get-set-up}
 
-\section{Render book}\label{render-book}
-
-You can render the HTML version of this example book without changing anything:
+This workshop relies on using software that requires a bit of preparation at the beginning to make sure we are all on the same page. You may have all or some of these installed, but the person next to you may not. Let's take some time to run through a checklist step-by-step of what needs to be installed. \textbf{Please be patient as we work to get everyone ready to start this workshop series.}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Find the \textbf{Build} pane in the RStudio IDE, and
+  You will need software to work with spreadsheets. I'd recommend Excel, which MtA offers to everyone as part of Office365 \href{https://mta.ca/current-students/tech-help-students/email-and-office-365-students}{available on the Mount Allison website}. Sheets for MacOs or Google Sheets are probably fine too if you are more comfortable with these, but our team will have less capacity to help you.
 \item
-  Click on \textbf{Build Book}, then select your output format, or select ``All formats'' if you'd like to use multiple formats from the same book source files.
+  Install the \href{https://cran.csiro.au/}{latest version of R} for your operating system.
+\item
+  Install \href{https://www.rstudio.com/products/rstudio/}{R Studio Desktop} for your operating system. There are many ways to use R and you might
+  have your own preference. But, RStudio is very user-friendly and will be using it for this workshop series.
+\item
+  Depending on your operating system (Windows), it is likely that you will also need to install \href{https://cran.r-project.org/bin/windows/Rtools/}{RTools} to compile new R packages. Please install it now.
+\item
+  The last software we need to install is LaTex, which facilitates the creation of PDF documents in R Markdown. There are a myriad of options, including MiKTeX, MacTeX, and TeX Live. I suggest that you use TinyTeX, which you can install with the R package \textbf{tinytex} \href{https://github.com/rstudio/tinytex}{(Xie 2024c)} by running this code in the Console:
 \end{enumerate}
 
-Or build the book from the R console:
-
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{render\_book}\NormalTok{()}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{\textquotesingle{}tinytex\textquotesingle{}}\NormalTok{)}
+\NormalTok{tinytex}\SpecialCharTok{::}\FunctionTok{install\_tinytex}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
-To render this example to PDF as a \texttt{bookdown::pdf\_book}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+\emph{You may run into issues, depending on how your operating system is set-up. The \href{https://yihui.org/tinytex/}{TinyTeX website} has instructions for each operating system.} It may be possible that you will need to manually install one of types of software that facilitates LaTex too. If that seems to be the case, you can access these for install at \href{https://www.latex-project.org/get/}{this website}.
 
-\section{Preview book}\label{preview-book}
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  After installation of all these programs, etc. it is very important to \textbf{\emph{restart your computer.}} A life tip - a new program won't be initiated to work on your computer if you don't restart it after it is installed! This is a critical part of the process.
+\item
+  After your computer restarts, now please open R Studio. We are going to be making use of some R packages repeatedly. So, let's just install them now, using the code below:
+\end{enumerate}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
+\FunctionTok{install.packages}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}tidyverse\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}rmarkdown\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}ggplot2\textquotesingle{}}\NormalTok{, }
+                   \StringTok{\textquotesingle{}scales\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}lazyWeave\textquotesingle{}}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\chapter{Hello bookdown}\label{hello-bookdown}
+Please note, that we will do our best to help with `debugging' if things are not working correctly on your computer. But, you might have issues you need to work on during your own time. Here are a few steps that you can take to help:
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+\begin{itemize}
+\item
+  Read the documentation. If it is for a package or piece of software be sure to read and follow the instructions carefully.
+\item
+  Google it. Google is your best friend. Google the package or piece of software, google the specific error message, and find those message board threads where people go to complain and find answers to their problems (likely GitHub and Stack Overflow). Go and find a solution for yourself!
+\end{itemize}
 
-\section{A section}\label{a-section}
+We will also be making extensive use of \textbf{R markdown} in these workshops. Here are some resources specifically about R markdown, that are always helpful to keep on hand while coding:
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+\begin{itemize}
+\item
+  \href{https://rmarkdown.rstudio.com/lesson-1.html}{Rmarkdown Website} that has explanations, tutorials, videos, etc.
+\item
+  \href{https://rstudio.github.io/cheatsheets/rmarkdown.pdf}{Rmarkdown Cheatsheet}
+\item
+  About \href{https://environmentalcomputing.net/getting-started-with-r/rstudio-notebooks/}{how to make use of R markdown files as a beginner}
+\item
+  \href{https://bookdown.org/yihui/rmarkdown/}{Rmarkdown the Definitive Guide} is a textbook that has clear examples and information about how best to work in R markdown
+\end{itemize}
 
-\subsection*{An unnumbered section}\label{an-unnumbered-section}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\section{\texorpdfstring{Using \emph{TIDY} Practices in your Open Science Projects}{Using TIDY Practices in your Open Science Projects}}\label{using-tidy-practices-in-your-open-science-projects}
 
-\chapter{Cross-references}\label{cross}
+Now that we are all set-up, we are going to focus on why organisation is important at multiple scales of your project. Although it is likely not the most exciting or complex topic, ensuring your research project files, code, and data are in a consistent, expected format facilitates effective use of your time and productive collaborations. \textbf{Tidy, organised projects are the foundation of reproducible science.} This is why we are starting with this topic because it is the basis on which we will build the rest of our skills in this workshop series.
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+There are also \textbf{many online resources that are helpful} on these topics, and here is a list of a few of them:
 
-\section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}
+\begin{itemize}
+\item
+  For \textbf{Tidy Projects}, some guidance on \href{https://environmentalcomputing.net/getting-started-with-r/project-management/}{basic project management}.
+\item
+  For \textbf{Tidy Code}, some guidance on \href{https://environmentalcomputing.net/coding-skills/good-practice/}{good practice for coding}
+\item
+  The \href{https://style.tidyverse.org/}{Tidyverse Style Guide} for help with writing \textbf{tidy code} in this particular coding style
+\item
+  The research article by Hadley Wickham describing \textbf{\href{https://vita.had.co.nz/papers/tidy-data.pdf}{Tidy Data}} and why it is important
+\item
+  A blog by Julia Lowndes and Allison Horst depicting and describing the importance of \textbf{\href{https://openscapes.org/blog/2020-10-12-tidy-data/}{Tidy Data}}
+\item
+  A research article by Karl Broman and Kara Woo describing important \href{https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989}{considerations for data organisation in spreadsheets} for \textbf{Tidy Data}
+\end{itemize}
 
-There are two steps to cross-reference any heading:
+\subsection{Plan for the Workshop}\label{plan-for-the-workshop}
+
+Today's workshop is going to be a mix of lecture and activities. You have already downloaded the slides for the lecture, and after I introduce the concept of ``tidy projects'' we will start working on some activities. These are outlined below (on this website), and also on the presentation slides and within an editable Rmarkdown document. We will set-up that R markdown document together and I encourage you to use that file to take notes and work on the activities.
+
+\subsection{Tidy Projects: Activities and Discussion}\label{tidy-projects-activities-and-discussion}
+
+First, \textbf{let's make our own R project} to work on the activities that will be happening during this workshop series. So, together, let's open R Studio. Then, we will create new R project and save it somewhere safe on our computers. Last, let's download the Rmarkdown file below and save it within the R project folder we just created:
+
+Awesome! Let's open up that R markdown document together within our R project. You can see there are notes from today's workshop in this document. I will walk you through how to knit the document, and view it in a nicely formatted version. You will see there are places for you to fill in your own notes on the activities are going to do today. Feel free to fill it in as we go!
+
+Now, let's \textbf{discuss as a group the concept of tidy projects} a little.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{Have a think and list all stakeholders that may conceivably have an interest in the outcomes of your research. That is, who will possibly benefit from your robust, reproducible science, in what way, and why?}
+\item
+  \emph{Have a think \& jot down down one potential positive consequences and one potential negative consequences of conducting open, reproducible research. Then we will chat about them as a group.}
+\end{enumerate}
+
+Next, please take a bit of time to \textbf{create a tidy project template for a real or hypothetical research project} you are working on. Take some time to think about the common `ingredients' of your project because that will help you create a flexible, generic project structure. Make sure to include a description for your files and let's make use of R markdown's list format to show any nesting of folders or files.
+
+\subsection{\texorpdfstring{Tidy Code: Activity about Using the R package \texttt{stylr}}{Tidy Code: Activity about Using the R package stylr}}\label{tidy-code-activity-about-using-the-r-package-stylr}
+
+Install the R package \texttt{styler}. Refer to the code chunk above where we installed R packages. Please add a new code chunk below, and install \texttt{styler} and load it into the R environment by adding a line of code that says \texttt{library(styler)}. If you need help, please put your RED POST-IT on top of your laptop, and try to Google solutions until one of us arrives to help.
+
+Run the chunk of R code below. It works! But it is hard to read and doesn't follow our `tidy code' ideals.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{15}\NormalTok{);}\FunctionTok{mean}\NormalTok{(x);}\FunctionTok{hist}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+The R package \texttt{styler}'s default style transformation is the \texttt{tidyverse\_style()}, which is what we will use in this workshop. Use it to fix the below R code chunk. To do this, select the text you want to fix. Then, click on the button titled ``Addins'' within R Studio. In the dropdown menu, click on ``Style selection''. Run the chunk of R code again.
+
+The same thing happens in R Studio's Console! It is just much easier to read and understand.
+
+\subsection{Tidy Data: Activity about Making Messy Data Tidy}\label{tidy-data-activity-about-making-messy-data-tidy}
+
+We will be working with a very messy dataset that is data from part of a long-term project on the effects of rodents and ants on the plant community, and has been running for almost 40 years and used in over 100 publications. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. We'll be working with a subset of the data which has been `messed up' a bit for the purposes of this workshop. The `mess', though artificial in the context of this dataset, is of the sort that I regularly come into contact (and you will to), so it's very much real in that sense.
+
+Please download your own copy of the dataset before making any changes:
+
+The data file contains:
+
+\begin{itemize}
+\tightlist
+\item
+  Three tabs: containing data from samples collected in 2013, 2014, and 2015, respectively
+\item
+  Date Collected: date of collection of the sample
+\item
+  Species: species identifier
+\item
+  Plot: replicate plot identifier
+\item
+  Weight: weight of the captured specimen in grams
+\item
+  Sex: sex of the captured specimen
+\end{itemize}
+
+The mission here is simple, but will also be a bit challenging. Focus all of your tidy skills on the catastrophe that is \texttt{workshop-1-messy-survey.xlsx} to parse it into its cleanest, tidiest, and most useful self.
+
+You can complete this by a mix of adjustments by hand and also in R. How you do it is up to you! But, because as we are making direct changes to the raw data, be sure to note down every change you make (especially if you are doing this by hand rather than using code in R). You can do this below (with a combination of R code within an R chunk, if you choose that option) or in a separate text file. It is up to you!
+
+We will chat about what you have done as a group before we end the workshop. Thanks for your attention today!
+
+In your R markdown file, document all the changes you made to the data file. This can be a bullet-point list, description, chunks of annotated R code, or a mixture of all three.
+
+\chapter{Welcome Back! Let's Git With It.}\label{welcome-back-lets-git-with-it.}
+
+Today we are going to add Git and GitHub to the toolkit we started building in the first workshop. In the last workshop, we saw that R and RStudio can be used to create reproducible projects. This workshop is all about adding collaboration and sharing to these projects. In other words, we're making the science open!
+
+A handout of the slides from the presentation for this workshop can be found in the attached PDF:
+
+\section{Get Git and GitHub}\label{get-git-and-github}
+
+We will need to spend some time getting software installed at the beginning of this workshop. Use your red sticky note to let us know that you are stuck or have a question. For those of you who already have this software installed, please help your neighbours if you can!
+
+\subsection{\texorpdfstring{\href{https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=\%2F&source=header-home}{Register a GitHub account}.}{Register a GitHub account.}}\label{register-a-github-account.}
+
+We recommend that you incorporate your name in your username so that future collaborators can find you. Use lowercase letters and dashes to prevent coding challenges. Do not include your current university or employer, since those may change.
+
+Examples of good usernames: \href{https://github.com/julia-riley}{julia-riley}, \href{https://github.com/estregger}{estregger}, \href{https://github.com/christelinda-laureijs}{christelinda-laurejis}
+
+\subsection{Install Git}\label{install-git}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Label the heading: \texttt{\#\ Hello\ world\ \{\#nice-label\}}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Leave the label off if you like the automated heading generated based on your heading title: for example, \texttt{\#\ Hello\ world} = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
-  \item
-    To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
-  \end{itemize}
-\item
-  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter \ref{cross}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    If you prefer text as the link instead of a numbered reference use: \hyperref[cross]{any text you want can go here}.
-  \end{itemize}
+  Windows: Install \href{https://gitforwindows.org/}{Git for Windows}
 \end{enumerate}
 
-\section{Captioned figures and tables}\label{captioned-figures-and-tables}
+This version, from gitforwindows.org, is also known as ``Git Bash'' Modify one of the default installation prompts: select ``Git from the command line and also 3rd-party software''
 
-Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  macOS: Install \href{https://git-scm.com/downloads}{Git}
+\end{enumerate}
 
-See Figure \ref{fig:nice-fig}.
+Another option is to install the Xcode command line tools. This includes Git. In terminal, enter this code:
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+xcode-select --install
 
-\begin{figure}
+\subsection{Configure Git from inside RStudio}\label{configure-git-from-inside-rstudio}
 
-{\centering \includegraphics[width=0.8\linewidth,alt={Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.}]{02-cross-refs_files/figure-latex/nice-fig-1} 
+Install the package ``usethis'' in the console. We'll use this package to set our user name and email. The user name here could include details about which computer you are using, if you use multiple computers for your R projects. Example: Stregger Desktop. The email address must be the email address you used to set up your GitHub account.
 
-}
+\begin{verbatim}
+library(usethis)
+use_git_config(user.name = "Participant Name", user.email = "participant@mta.ca")
+usethis::git_default_branch_configure()
+\end{verbatim}
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
+\subsection{Connect Git to GitHub}\label{connect-git-to-github}
 
-Don't miss Table \ref{tab:nice-tab}.
+Now that you have Git running on your computer, you need credentials to communicate with your GitHub account.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(pressure, }\DecValTok{10}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
-  \AttributeTok{booktabs =} \ConstantTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+The easiest way to do this with the usethis package in R.
 
-\begin{table}
+\begin{verbatim}
+usethis::create_github_token()
+\end{verbatim}
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rr}
-\toprule
-temperature & pressure\\
-\midrule
-0 & 0.0002\\
-20 & 0.0012\\
-40 & 0.0060\\
-60 & 0.0300\\
-80 & 0.0900\\
-\addlinespace
-100 & 0.2700\\
-120 & 0.7500\\
-140 & 1.8500\\
-160 & 4.2000\\
-180 & 8.8000\\
-\bottomrule
-\end{tabular}
-\end{table}
+This should open GitHub. Give the token a name. Again, if you use multiple computers, it is helpful to include the name or location of the computer so you can keep track of your tokens. You will need one for each computer.
 
-\chapter{Parts}\label{parts}
+Copy the personal access token and leave the browser window open until your credentials are set. We'll do that next.
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
+\begin{verbatim}
+gitcreds::gitcreds_set()
+\end{verbatim}
 
-Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
-
-Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
-
-Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
-
-\chapter{Footnotes and citations}\label{footnotes-and-citations}
-
-\section{Footnotes}\label{footnotes}
-
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
-
-\section{Citations}\label{citations}
-
-Reference items in your bibliography file(s) using \texttt{@key}.
-
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
-
-The \texttt{bs4\_book} theme makes footnotes appear inline when you click on them. In this example book, we added \texttt{csl:\ chicago-fullnote-bibliography.csl} to the \texttt{index.Rmd} YAML, and include the \texttt{.csl} file. To download a new style, we recommend: \url{https://www.zotero.org/styles/}
-
-The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
-
-\chapter{Blocks}\label{blocks}
-
-\section{Equations}\label{equations}
-
-Here is an equation.
-
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
-\end{equation}
-
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
-
-\section{Theorems and proofs}\label{theorems-and-proofs}
-
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
-
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
-\end{theorem}
-
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
-
-\section{Callout blocks}\label{callout-blocks}
-
-The \texttt{bs4\_book} theme also includes special callout blocks, like this \texttt{.rmdnote}.
-
-You can use \textbf{markdown} inside a block.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{head}\NormalTok{(beaver1, }\AttributeTok{n =} \DecValTok{5}\NormalTok{)}
-\CommentTok{\#\textgreater{}   day time  temp activ}
-\CommentTok{\#\textgreater{} 1 346  840 36.33     0}
-\CommentTok{\#\textgreater{} 2 346  850 36.34     0}
-\CommentTok{\#\textgreater{} 3 346  900 36.35     0}
-\CommentTok{\#\textgreater{} 4 346  910 36.42     0}
-\CommentTok{\#\textgreater{} 5 346  920 36.55     0}
-\end{Highlighting}
-\end{Shaded}
-
-It is up to the user to define the appearance of these blocks for LaTeX output.
-
-You may also use: \texttt{.rmdcaution}, \texttt{.rmdimportant}, \texttt{.rmdtip}, or \texttt{.rmdwarning} as the block name.
-
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
-
-\chapter{Sharing your book}\label{sharing-your-book}
-
-\section{Publishing}\label{publishing}
-
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
-
-\section{404 pages}\label{pages}
-
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
-
-\section{Metadata for sharing}\label{metadata-for-sharing}
-
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
-
-This \texttt{bs4\_book} provides enhanced metadata for social sharing, so that each chapter shared will have a unique description, auto-generated based on the content.
-
-Specify your book's source repository on GitHub as the \texttt{repo} in the \texttt{\_output.yml} file, which allows users to view each chapter's source file or suggest an edit. Read more about the features of this output format here:
-
-\url{https://pkgs.rstudio.com/bookdown/reference/bs4_book.html}
-
-Or use:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{bs4\_book}
-\end{Highlighting}
-\end{Shaded}
-
+If this does not work for you, there are other types of keys, called SSH keys. There are instructions for setting up SSH keys in the \href{https://happygitwithr.com/ssh-keys}{Happy Git and GitHub for the useR guide.}
 
   \bibliography{book.bib,packages.bib}
 
