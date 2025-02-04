@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 3 Welcome Back! Let’s Git With It. | Open Science Skills in R</title>
+<meta name="author" content="Christelinda Laureijs, Elizabeth Stregger, Dr. Julia Riley">
+<meta name="description" content="Today we are going to add Git and GitHub to the toolkit we started building in the first workshop. In the last workshop, we saw that R and RStudio can be used to create reproducible projects. This...">
+<meta name="generator" content="bookdown 0.42 with bs4_book()">
+<meta property="og:title" content="Chapter 3 Welcome Back! Let’s Git With It. | Open Science Skills in R">
+<meta property="og:type" content="book">
+<meta property="og:image" content="/images/cover.jpg">
+<meta property="og:description" content="Today we are going to add Git and GitHub to the toolkit we started building in the first workshop. In the last workshop, we saw that R and RStudio can be used to create reproducible projects. This...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 3 Welcome Back! Let’s Git With It. | Open Science Skills in R">
+<meta name="twitter:description" content="Today we are going to add Git and GitHub to the toolkit we started building in the first workshop. In the last workshop, we saw that R and RStudio can be used to create reproducible projects. This...">
+<meta name="twitter:image" content="/images/cover.jpg">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-LTTMM7HKVJ"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LTTMM7HKVJ');
+    </script><link rel="shortcut icon" href="favicon.ico">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Open Science Skills in R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled"><li><a class="" href="index.html"><span class="header-section-number">Chapter 3</span> Welcome Back! Let’s Git With It.</a></li></ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/christelinda-laureijs/Open-Science-Skills-in-R-Book">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="welcome-back-lets-git-with-it." class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Welcome Back! Let’s Git With It.<a class="anchor" aria-label="anchor" href="#welcome-back-lets-git-with-it."><i class="fas fa-link"></i></a>
+</h1>
+<p>Today we are going to add Git and GitHub to the toolkit we started building in the first workshop. In the last workshop, we saw that R and RStudio can be used to create reproducible projects. This workshop is all about adding collaboration and sharing to these projects. In other words, we’re making the science open!</p>
+<p>A handout of the slides from the presentation for this workshop can be found in the attached PDF:</p>
+<div id="get-git-and-github" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Get Git and GitHub<a class="anchor" aria-label="anchor" href="#get-git-and-github"><i class="fas fa-link"></i></a>
+</h2>
+<p>We will need to spend some time getting software installed at the beginning of this workshop. Use your red sticky note to let us know that you are stuck or have a question. For those of you who already have this software installed, please help your neighbours if you can!</p>
+<div id="register-a-github-account." class="section level3" number="3.1.1">
+<h3>
+<span class="header-section-number">3.1.1</span> <a href="https://github.com/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F&amp;source=header-home">Register a GitHub account</a>.<a class="anchor" aria-label="anchor" href="#register-a-github-account."><i class="fas fa-link"></i></a>
+</h3>
+<p>We recommend that you incorporate your name in your username so that future collaborators can find you. Use lowercase letters and dashes to prevent coding challenges. Do not include your current university or employer, since those may change.</p>
+<p>Examples of good usernames: <a href="https://github.com/julia-riley">julia-riley</a>, <a href="https://github.com/estregger">estregger</a>, <a href="https://github.com/christelinda-laureijs">christelinda-laurejis</a></p>
+</div>
+<div id="install-git" class="section level3" number="3.1.2">
+<h3>
+<span class="header-section-number">3.1.2</span> Install Git<a class="anchor" aria-label="anchor" href="#install-git"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Windows: Install <a href="https://gitforwindows.org/">Git for Windows</a>
+</li>
+</ol>
+<p>This version, from gitforwindows.org, is also known as “Git Bash” Modify one of the default installation prompts: select “Git from the command line and also 3rd-party software”</p>
+<ol start="2" style="list-style-type: decimal">
+<li>macOS: Install <a href="https://git-scm.com/downloads">Git</a>
+</li>
+</ol>
+<p>Another option is to install the Xcode command line tools. This includes Git. In terminal, enter this code:</p>
+<p>xcode-select –install</p>
+</div>
+<div id="configure-git-from-inside-rstudio" class="section level3" number="3.1.3">
+<h3>
+<span class="header-section-number">3.1.3</span> Configure Git from inside RStudio<a class="anchor" aria-label="anchor" href="#configure-git-from-inside-rstudio"><i class="fas fa-link"></i></a>
+</h3>
+<p>Install the package “usethis” in the console. We’ll use this package to set our user name and email. The user name here could include details about which computer you are using, if you use multiple computers for your R projects. Example: Stregger Desktop. The email address must be the email address you used to set up your GitHub account.</p>
+<pre><code><a href="https://usethis.r-lib.org">library(usethis)
+use_git_config(user.name = "Participant Name", user.email = "participant@mta.ca")
+usethis::git_default_branch_configure()</a></code></pre>
+</div>
+<div id="connect-git-to-github" class="section level3" number="3.1.4">
+<h3>
+<span class="header-section-number">3.1.4</span> Connect Git to GitHub<a class="anchor" aria-label="anchor" href="#connect-git-to-github"><i class="fas fa-link"></i></a>
+</h3>
+<p>Now that you have Git running on your computer, you need credentials to communicate with your GitHub account.</p>
+<p>The easiest way to do this with the usethis package in R.</p>
+<pre><code><a href="https://usethis.r-lib.org/reference/github-token.html">usethis::create_github_token()</a></code></pre>
+<p>This should open GitHub. Give the token a name. Again, if you use multiple computers, it is helpful to include the name or location of the computer so you can keep track of your tokens. You will need one for each computer.</p>
+<p>Copy the personal access token and leave the browser window open until your credentials are set. We’ll do that next.</p>
+<pre><code><a href="https://gitcreds.r-lib.org/reference/gitcreds_get.html">gitcreds::gitcreds_set()</a></code></pre>
+<p>If this does not work for you, there are other types of keys, called SSH keys. There are instructions for setting up SSH keys in the <a href="https://happygitwithr.com/ssh-keys">Happy Git and GitHub for the useR guide.</a></p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="empty"></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <div id="book-on-this-page"></div>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Open Science Skills in R</strong>" was written by Christelinda Laureijs, Elizabeth Stregger, Dr. Julia Riley. It was last built on January 26, 2025.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

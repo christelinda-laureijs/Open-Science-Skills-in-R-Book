@@ -1,0 +1,57 @@
+# Welcome Back! Let's Git With It.
+
+Today we are going to add Git and GitHub to the toolkit we started building in the first workshop. In the last workshop, we saw that R and RStudio can be used to create reproducible projects. This workshop is all about adding collaboration and sharing to these projects. In other words, we're making the science open!
+
+A handout of the slides from the presentation for this workshop can be found in the attached PDF:
+
+## Get Git and GitHub
+
+We will need to spend some time getting software installed at the beginning of this workshop. Use your red sticky note to let us know that you are stuck or have a question. For those of you who already have this software installed, please help your neighbours if you can!
+
+### [Register a GitHub account](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
+
+We recommend that you incorporate your name in your username so that future collaborators can find you. Use lowercase letters and dashes to prevent coding challenges. Do not include your current university or employer, since those may change.
+
+Examples of good usernames: [julia-riley](https://github.com/julia-riley), [estregger](https://github.com/estregger), [christelinda-laurejis](https://github.com/christelinda-laureijs)
+
+### Install Git
+
+1.  Windows: Install [Git for Windows](https://gitforwindows.org/)
+
+This version, from gitforwindows.org, is also known as "Git Bash" Modify one of the default installation prompts: select "Git from the command line and also 3rd-party software"
+
+2.  macOS: Install [Git](https://git-scm.com/downloads)
+
+Another option is to install the Xcode command line tools. This includes Git. In terminal, enter this code:
+
+xcode-select --install
+
+### Configure Git from inside RStudio
+
+Install the package "usethis" in the console. We'll use this package to set our user name and email. The user name here could include details about which computer you are using, if you use multiple computers for your R projects. Example: Stregger Desktop. The email address must be the email address you used to set up your GitHub account.
+
+```
+library(usethis)
+use_git_config(user.name = "Participant Name", user.email = "participant@mta.ca")
+usethis::git_default_branch_configure()
+```
+
+### Connect Git to GitHub
+
+Now that you have Git running on your computer, you need credentials to communicate with your GitHub account.
+
+The easiest way to do this with the usethis package in R.
+
+```
+usethis::create_github_token()
+```
+
+This should open GitHub. Give the token a name. Again, if you use multiple computers, it is helpful to include the name or location of the computer so you can keep track of your tokens. You will need one for each computer.
+
+Copy the personal access token and leave the browser window open until your credentials are set. We'll do that next.
+
+```
+gitcreds::gitcreds_set()
+```
+
+If this does not work for you, there are other types of keys, called SSH keys. There are instructions for setting up SSH keys in the [Happy Git and GitHub for the useR guide.](https://happygitwithr.com/ssh-keys)
