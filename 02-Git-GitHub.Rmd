@@ -63,6 +63,6 @@ If this does not work for you, there are other types of keys, called SSH keys. T
 
 ## Helpful Resources about Git
 
-* Happy Git and GitHub for the [useR guide](https://happygitwithr.com).
+* [Happy Git and GitHub for the useR guide](https://happygitwithr.com).
 
 * We used R Studio to connect your local computer with your online repository (via pulling and pushing changes). Another way to do this that is really user friendly using GitHub Desktop. Here is a link to a [video tutorial](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-Desktop-tutorial-for-beginners) and [written tutorial](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop#part-3-contributing-to-projects-with-github-desktop). There are lots of other resources online too!
