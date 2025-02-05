@@ -4,6 +4,10 @@ Today we are going to add Git and GitHub to the toolkit we started building in t
 
 A handout of the slides from the presentation for this workshop can be found in the attached PDF:
 
+```{r download-workshop-two-handout-pdf, echo=F}
+xfun::embed_file('workshop-materials/workshop-2-presentation-handout.pdf')
+```
+
 ## Get Git and GitHub
 
 We will need to spend some time getting software installed at the beginning of this workshop. Use your red sticky note to let us know that you are stuck or have a question. For those of you who already have this software installed, please help your neighbours if you can!
@@ -32,8 +36,8 @@ Install the package "usethis" in the console. We'll use this package to set our 
 
 ```
 library(usethis)
-use_git_config(user.name = "Participant Name", user.email = "participant@mta.ca")
-usethis::git_default_branch_configure()
+#use_git_config(user.name = "Participant Name", user.email = "participant@mta.ca")
+#usethis::git_default_branch_configure()
 ```
 
 ### Connect Git to GitHub
