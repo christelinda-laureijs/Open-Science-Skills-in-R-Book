@@ -7,7 +7,6 @@ plan-for-the-workshop
 tidy-projects-activities-and-discussion
 tidy-code-activity-about-using-the-r-package-stylr
 tidy-data-activity-about-making-messy-data-tidy
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
 welcome-back-lets-git-with-it.
 get-git-and-github
 register-a-github-account.
