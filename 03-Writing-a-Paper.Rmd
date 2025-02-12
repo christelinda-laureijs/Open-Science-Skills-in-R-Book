@@ -1,0 +1,13 @@
+# Writing a Paper in R
+
+This is a very exciting workshop! You will use the skills that you've learned from the past two workshops to create a fully reproducible paper in R.
+
+The format of this is workshop is a bit different than others, in that it will primarily be a lecture.
+
+Please follow along with the attached PDF!
+
+```{r download-workshop-three-handout-pdf, echo=F}
+xfun::embed_file('workshop-materials/workshop-3-handout-paper-writing.pdf')
+```
+
+And here is the link to the GitHub template: [https://github.com/christelinda-laureijs/sample-thesis](https://github.com/christelinda-laureijs/sample-thesis)

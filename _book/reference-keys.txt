@@ -14,3 +14,4 @@ install-git
 configure-git-from-inside-rstudio
 connect-git-to-github
 helpful-resources-about-git
+writing-a-paper-in-r
